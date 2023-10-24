@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
 
 async function handler(_req: Request): Promise<Response> {
-    const simscore= similarity("Chaud","Froid");
+    const  simscore=await similarity("Chaud","Froid");
     return new Response("Hello Score " + JSON.stringify(simscore));
 }
 
